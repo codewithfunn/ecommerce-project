@@ -39,12 +39,12 @@ const SignupCom = () => {
                 </form>
                 <div className="social-account-container">
                     <span className="title">Or Sign up with</span>
-                    {loading ? <div> <section class="dots-container">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
+                    {loading ? <div> <section className="dots-container">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
                     </section> </div> : ''
                     }
                     <div className="social-accounts">

@@ -1,10 +1,10 @@
 import React from 'react'
 import Cards from './card';
 
-const ProductCom = () => {
+const Products = () => {
   return (
    <Cards/>
   )
 }
 
-export default ProductCom;
+export default Products;

@@ -1,17 +1,24 @@
 // server.js
 const express = require("express");
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const cors = require("cors");
 const mongoose = require("mongoose");
-const { MONGODB_URL } = require("./config");
 global.__basedir = __dirname;
 const userRouter = require("./routes/user_r");
 const adminRouter = require("./routes/admin_r");
 const fileController = require("./controllers/file_c");
 const cartRouter = require("./routes/cart_r");
+const dotenv = require('dotenv');
+dotenv.config({ path: './local.env' });
+mongoose
+  .connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  // eslint-disable-next-line no-console
+  .then(() => console.log('DB Connection Successful'));
 
-mongoose.connect("mongodb://127.0.0.1:27017/POOJA");
 
 mongoose.connection.on("connected", () => {
   console.log("DB connected");

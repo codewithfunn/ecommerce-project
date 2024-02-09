@@ -32,15 +32,15 @@ const ManageUser = () => {
     <div className='UserContainer mb-4'>
      {users.map((user) => (
       <div key={user._id}>
-    <div class="Usercard p-6">
-    <div class="card-border-top">
+    <div className="Usercard p-6">
+    <div className="card-border-top">
     </div>
-    <div class="img">
+    <div className="img">
     </div>
     <span> {user.name} </span>
-    <p class="job"> {user.email}</p>
-    <p class="job"> {user.username}</p>
-    <p class="job"> {user.address}</p>
+    <p className="job"> {user.email}</p>
+    <p className="job"> {user.username}</p>
+    <p className="job"> {user.address}</p>
 
     <button> Remove User
     </button>

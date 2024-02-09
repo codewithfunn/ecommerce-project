@@ -40,12 +40,12 @@ const LoginCom = () => {
         </form>
         <div className="social-account-container">
           <span className="title">Or Sign in with</span>
-          {loading ? <div> <section class="dots-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+          {loading ? <div> <section className="dots-container">
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
         </section> </div> : ''
         }
           <div className="social-accounts">

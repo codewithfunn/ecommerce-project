@@ -64,23 +64,26 @@ const DeleteCart = async (req, res) => {
   try {
     const productId = req.params.productId;
     const userId = req.user;
+
+    // Find the user's cart
     const userCart = await Cart.findOne({ user: userId });
-    if (userCart) {
-      const newCart = userCart.items.filter(
-        (p) => p.product !== productId
-      );
-      userCart.items = newCart;
-      await userCart.save();
-      res.status(200).json({ message: "Item deleted from cart successfully" });
-    } else {
-      res.status(404).json({ message: "Cart not found" });
+
+    if (!userCart) {
+      return res.status(404).json({ message: "Cart not found" });
     }
+
+    // Filter out the item with the specified productId
+    userCart.items = userCart.items.filter((item) => item.product !== productId);
+
+    // Save the updated cart
+    await userCart.save();
+
+    return res.status(200).json({ message: "Item deleted from cart successfully" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Internal Server Error" });
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 };
-
 // Increase Quantity
 const AddQuantity = async (req, res) => {
  try {

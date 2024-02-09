@@ -31,10 +31,10 @@ const ProfilePage = () => {
   return (
 <>
     <div className='profileContainer m-4'>
-      <div class="Profilecard">
-        <div class="content">
-          <div class="back">
-            <div class="back-content">
+      <div className="Profilecard">
+        <div className="content">
+          <div className="back">
+            <div className="back-content">
               <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
 
               <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
@@ -46,17 +46,17 @@ const ProfilePage = () => {
               <strong>User Profile</strong>
             </div>
           </div>
-          <div class="front">
-            <div class="img">
-              <div class="circle">
+          <div className="front">
+            <div className="img">
+              <div className="circle">
               </div>
-              <div class="circle" id="right">
+              <div className="circle" id="right">
               </div>
-              <div class="circle" id="bottom">
+              <div className="circle" id="bottom">
               </div>
             </div>
-            <div class="front-content">
-              <small class="badge">User profile</small>
+            <div className="front-content">
+              <small className="badge">User profile</small>
               <div >
                 <div >
                   {userData && (

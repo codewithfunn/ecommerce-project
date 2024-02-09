@@ -1,11 +1,14 @@
 import React from 'react'
-import ProductCom from './../components/products';
-
+import ProductCards from '../components/ProductCards';
 const Product = () => {
   return (
-    <>
-    <ProductCom/>
-    </>
+    <div className='ourProducts py-lg-4 d-flex flex-column  justify-content-center  '>
+    {/* <ProductCom/> */}
+    <div className='text-center'>
+      <h2>Our Products</h2>
+    </div>
+      <ProductCards/>
+    </div>
   )
 }
 

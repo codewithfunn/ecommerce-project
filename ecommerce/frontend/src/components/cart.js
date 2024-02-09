@@ -27,17 +27,17 @@ const CartCom = () => {
     fetchCartData();
   }, []);
   return (
-    <div class="master-container">
-  <div class="card cart">
-    <label class="title">Your cart</label>
-    <div class="products">
+    <div className="master-container">
+  <div className="card cart">
+    <label className="title">Your cart</label>
+    <div className="products">
     {cartData ? ( 
       cartData.items.map((product) => ( 
-      <div key={product._id} class="product">
+      <div key={product._id} className="product">
         <div>
           <span>{product.product}</span>
         </div>
-        <div class="quantity">
+        <div className="quantity">
           <button>
             <svg fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" stroke="#47484b" d="M20 12L4 12"></path>
@@ -50,23 +50,23 @@ const CartCom = () => {
             </svg>
           </button>
         </div>
-        <label class="price small">{product.price}</label>
+        <label className="price small">{product.price}</label>
       </div>
       ))) : (<p>Loading...</p>)}
     </div>
   </div>
 
-  <div class="card coupons">
-    <label class="title">Apply coupons</label>
-    <form class="form">
-        <input type="text" placeholder="Apply your coupons here" class="input_field"/>
+  <div className="card coupons">
+    <label className="title">Apply coupons</label>
+    <form className="form">
+        <input type="text" placeholder="Apply your coupons here" className="input_field"/>
         <button>Apply</button>
     </form>
   </div>
 
-  <div class="card checkout">
-    <label class="title">Checkout</label>
-    <div class="details">
+  <div className="card checkout">
+    <label className="title">Checkout</label>
+    <div className="details">
       <span>Your cart subtotal:</span>
       <span>47.99$</span>
       <span>Discount through applied coupons:</span>
@@ -74,9 +74,9 @@ const CartCom = () => {
       <span>Shipping fees:</span>
       <span>4.99$</span>
     </div>
-    <div class="checkout--footer">
-      <label class="price"><sup>$</sup>57.99</label>
-      <button class="checkout-btn">Checkout</button>
+    <div className="checkout--footer">
+      <label className="price"><sup>$</sup>57.99</label>
+      <button className="checkout-btn">Checkout</button>
     </div>
   </div>
 </div>

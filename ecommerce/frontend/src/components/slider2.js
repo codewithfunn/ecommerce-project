@@ -19,7 +19,7 @@ const Slider2 = () => {
   return (
     <>
     <h2 className='animate__animated animate__bounce wow text-center m-4 text-danger font-design'> Featured products</h2>
-    <Carousel interval={null} nextIcon={<span class="text-primary">Next</span>} prevIcon={<span class="text-primary">Prev</span>}>
+    <Carousel interval={null} nextIcon={<span className="text-primary">Next</span>} prevIcon={<span className="text-primary">Prev</span>}>
        <Carousel.Item>
         <div className="d-flex justify-content-around">
           <div className='slider2'>
